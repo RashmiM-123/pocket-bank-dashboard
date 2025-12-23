@@ -6,10 +6,9 @@ import TransactionList from "./components/TransactionList";
 import TransactionFilter from "./components/TransactionFilter";
 import TransferForm from "./components/TransferForm";
 
-import { initialTransactions } from "../src/data/transactions";
+import { initialTransactions } from "./data/transactions";
 import type { Transaction } from "./types/transaction";
-
-type FilterType = "all" | "credit" | "debit";
+import type { FilterType } from "./types/filter";
 
 export default function App() {
   // 🔹 State
@@ -21,7 +20,7 @@ export default function App() {
   // 🔹 Balance Calculation
   const balance = useMemo(() => {
     return transactions.reduce((total, tx) => {
-      return tx.type === "credit"
+      return tx.type === "income"
         ? total + tx.amount
         : total - tx.amount;
     }, 0);
