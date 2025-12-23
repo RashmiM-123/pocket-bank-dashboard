@@ -22,7 +22,7 @@ export default function TransferForm({ balance, onTransfer }: Props) {
 
     const numAmount = Number(amount);
 
-    // 🔴 VALIDATIONS (CRITICAL)
+   
     if (!recipient || !date) {
       setError("All fields are required");
       return;
@@ -38,7 +38,7 @@ export default function TransferForm({ balance, onTransfer }: Props) {
       return;
     }
 
-    // ⏳ SIMULATION
+
     setLoading(true);
 
     setTimeout(() => {

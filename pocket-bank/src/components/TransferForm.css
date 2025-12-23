@@ -21,14 +21,18 @@
   align-items: center;
 }
 
+
 .transfer-card input {
   
-  width :700px;
+  width :500px;
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #d1d5db;
   font-size: 14px;
 }
+
+
+
 
 .transfer-card input:focus {
   outline: none;
@@ -61,9 +65,14 @@
   font-size: 13px;
 }
 
-/* Mobile */
-@media (max-width: 480px) {
+
+ @media (max-width: 480px) {
   .transfer-card {
     padding: 16px;
+  }
+
+  .transfer-card input,
+  .transfer-card button {
+    max-width: 100%;   /* fit small screens */
   }
 }
